@@ -1,5 +1,5 @@
 /**
- *
+ * @author BKY
  * @param { Function } fn
  * @param { Number } wait
  * @param { Boolean } immediate
