@@ -10,7 +10,7 @@ class A{
         typeof fn == 'function' && ++this.index && fn()
     }
     do(...arg){
-        if(this.timer) clearTimeout(this.timer) 
+        this.timer && clearTimeout(this.timer) 
         this.list.push(this._do.bind(this,...arg))
         this.timer = setTimeout(this.next.bind(this))
         return this
@@ -20,7 +20,7 @@ class A{
         this.next()
     }
     sleep(t){
-        if(this.timer) clearTimeout(this.timer) 
+        this.timer && clearTimeout(this.timer) 
         this.list.push(()=>{
             setTimeout(this.next.bind(this),t)
         })
